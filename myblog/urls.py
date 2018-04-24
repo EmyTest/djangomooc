@@ -20,9 +20,11 @@ from django.urls import path
 from django.conf.urls import url,include
 from django.contrib import  admin
 
+
 # import blog.views as bv
 urlpatterns = {
     url(r'^admin/', admin.site.urls),
-    url(r'^index/', include('blog.urls')),  # 添加 index/路径配置
+    url(r'^blog/', include('blog.urls')),
+    url(r'^blog2/', include('blog2.urls')),# 添加 index/路径配置
 }
 
